@@ -1,10 +1,21 @@
+import styled from 'styled-components'
+import Cabecalho from '../src/components/communs/Cabecalho'
 import Capa from '../src/components/communs/Capa'
-import Title from '../src/components/communs/Capa/Title'
+import Footer from '../src/components/communs/Footer'
+
+const Box = styled.div`
+  display:flex;
+  flex-direction:column;
+`;
 
 export default function Home() {
   return (
-    <Capa>
-      <Title>Portfolio</Title>
-    </Capa>
+    <Box>
+      <Capa />
+
+      <Cabecalho />
+
+      <Footer />
+    </Box>
   )
 };

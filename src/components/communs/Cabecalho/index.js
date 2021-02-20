@@ -1,18 +1,22 @@
 import React from 'react'
-import { css } from 'styled-components'
+import styled, { css } from 'styled-components'
+import Logo from '../../../theme/Logo';
+import Nav from './Nav';
+import { theme } from '../../../theme'
 
-const style = css`
+const WrapperCabecalho = styled.div`
+    background-color: ${ theme.colors.background };
+
     display:flex;
-    
+    justify-content: space-around;
 `;
+
 
 export default function Cabecalho(){
     return(
-        <div
-        style={style}
-        >
-            <Logo/>
-            <Nav/>
-        </div>
+        <WrapperCabecalho>
+            <Logo width='2em'/>
+            <Nav />
+        </WrapperCabecalho>
     )
 };
