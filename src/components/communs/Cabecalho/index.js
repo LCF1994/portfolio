@@ -9,6 +9,12 @@ const WrapperCabecalho = styled.div`
 
     display:flex;
     justify-content: space-around;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    margin-top:2px;
+    margin-bottom:2px;
 `;
 
 
