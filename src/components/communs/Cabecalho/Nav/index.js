@@ -28,11 +28,11 @@ export default function Nav(){
         }, 
         {
             name:'Projects',
-            link:'/projects'
+            link:'/'
         },
         {
             name:'Contact',
-            link:'/contact'
+            link:'/'
         },
     ]
 

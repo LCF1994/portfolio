@@ -19,11 +19,11 @@ export default function Footer(){
     const IconsList = [
         {
             icon: 'github-square',
-            link: '/Github',
+            link: 'https://github.com/LCF1994',
         },
         {
             icon: 'linkedin-in',
-            link: '/linkedIN',
+            link: 'https://www.linkedin.com/in/lucas-campos-ferreira-673267108/',
         }
     ]
 
