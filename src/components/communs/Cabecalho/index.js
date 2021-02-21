@@ -5,7 +5,7 @@ import Nav from './Nav';
 import { theme } from '../../../theme'
 
 const WrapperCabecalho = styled.div`
-    background-color: ${ theme.colors.background };
+    background-color: ${ theme.colors.backgroundLight };
 
     display:flex;
     justify-content: space-around;
@@ -21,7 +21,7 @@ const WrapperCabecalho = styled.div`
 export default function Cabecalho(){
     return(
         <WrapperCabecalho>
-            <Logo width='2em'/>
+            <Logo width='2em' height='5em' />
             <Nav />
         </WrapperCabecalho>
     )

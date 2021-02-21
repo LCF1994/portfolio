@@ -12,6 +12,7 @@ const WrapperFooter = styled.div`
 
     background: ${ theme.colors.background };
 
+    margin-top:2px;
 `;
 
 export default function Footer(){
@@ -31,7 +32,7 @@ export default function Footer(){
         <footer>
             <WrapperFooter>
                 { IconsList.map(( item )=>(
-                    <Icon type={ item } />
+                    <Icon key={item.icon} type={ item } />
                 ))}
             </WrapperFooter>
         </footer>

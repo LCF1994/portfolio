@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Cabecalho from '../src/components/communs/Cabecalho'
 import Capa from '../src/components/communs/Capa'
 import Footer from '../src/components/communs/Footer'
+import Projects from '../src/components/communs/Projetos';
 
 const Box = styled.div`
   display:flex;
@@ -14,6 +15,8 @@ export default function Home() {
       <Capa />
 
       <Cabecalho />
+
+      <Projects />
 
       <Footer />
     </Box>

@@ -40,7 +40,7 @@ export default function Nav(){
         <ListHorizontal>
             { Sections.map((section)=>{
                 return (
-                <li>
+                <li key={section.name}>
                     <a href={section.link}
                     >{ section.name }</a>
                 </li>

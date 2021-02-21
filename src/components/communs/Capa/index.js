@@ -1,18 +1,27 @@
 import React from 'react';
-import Title from './Title';
 import CapaWrapper from './CapaWrapper'
-import SubTitle from './SubTitle';
+import Text from '../../foundations/Text';
+import { theme } from '../../../theme';
 
 export default function Capa(){
 
     return(
         <CapaWrapper>
-            <Title>
+            <Text
+            tag='h1'
+            color={ theme.colors.primary }
+            variant='title'
+            >
                 Lucas Campos Ferreira
-            </Title>
-            <SubTitle>
+            </Text>
+            <Text
+            tag='h1'
+            color={ theme.colors.secoundary }
+            variant='subtitle'
+            marginTop='1px'
+            >
                 Portfolio
-            </SubTitle>
+            </Text>
         </CapaWrapper>
     )
 };
