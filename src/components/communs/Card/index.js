@@ -10,13 +10,12 @@ const CardDefault = css`
 `;
 
 const CardDestaque = css`
-    @media(min-width:${breakpointList.xs}) {
+    @media(max-width:${breakpointList.md}) {
         grid-row:1;
         width:300px;
     }
     
     @media(min-width: ${breakpointList.lg}) {
-        grid-row:auto;
         flex-direction:row;
         grid-column: 1 / span 3;
         width: 1370px;
@@ -51,12 +50,12 @@ const CardImageStyle = css`
     `)}
 `;
 
-function CardImage({ src }) {
+function CardImage({ src, alt }) {
   return (
     <img
       style={CardImageStyle}
       src={src}
-      alt="Imagem"
+      alt={alt}
     />
   );
 }
@@ -81,6 +80,7 @@ export default function Card({ content, destaque }) {
     <Container destaque={destaque}>
       <CardImage
         src={content.url}
+        alt={content.alt}
       />
       <CardTextContainer>
         <Text

@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { addBreakPoints } from './addBreakPoints';
+import addBreakPoints from './addBreakPoints';
 
 export default function propToStyle(propName) {
   return (props) => {
