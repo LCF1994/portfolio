@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-
+import styled from 'styled-components';
 
 const ListHorizontal = styled.ul`
     display:flex;
@@ -19,33 +18,31 @@ const ListHorizontal = styled.ul`
     } 
 `;
 
-export default function Nav(){
+export default function Nav() {
+  const Sections = [
+    {
+      name: 'Home',
+      link: '/',
+    },
+    {
+      name: 'Projects',
+      link: '/',
+    },
+    {
+      name: 'Contact',
+      link: '/',
+    },
+  ];
 
-    const Sections = [
-        {
-            name:'Home',
-            link:'/'
-        }, 
-        {
-            name:'Projects',
-            link:'/'
-        },
-        {
-            name:'Contact',
-            link:'/'
-        },
-    ]
-
-    return( 
-        <ListHorizontal>
-            { Sections.map((section)=>{
-                return (
-                <li key={section.name}>
-                    <a href={section.link}
-                    >{ section.name }</a>
-                </li>
-                )
-            })}
-        </ListHorizontal> 
-    )
+  return (
+    <ListHorizontal>
+      { Sections.map((section) => (
+        <li key={section.name}>
+          <a href={section.link}>
+            { section.name }
+          </a>
+        </li>
+      ))}
+    </ListHorizontal>
+  );
 }

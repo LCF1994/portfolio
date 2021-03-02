@@ -1,11 +1,11 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
+import React from 'react';
+import styled, { css } from 'styled-components';
 import Logo from '../../../theme/Logo';
 import Nav from './Nav';
-import { theme } from '../../../theme'
+import { theme } from '../../../theme';
 
 const WrapperCabecalho = styled.div`
-    background-color: ${ theme.colors.backgroundLight };
+    background-color: ${theme.colors.backgroundLight};
 
     display:flex;
     justify-content: space-around;
@@ -17,12 +17,11 @@ const WrapperCabecalho = styled.div`
     margin-bottom:2px;
 `;
 
-
-export default function Cabecalho(){
-    return(
-        <WrapperCabecalho>
-            <Logo width='2em' height='5em' />
-            <Nav />
-        </WrapperCabecalho>
-    )
-};
+export default function Cabecalho() {
+  return (
+    <WrapperCabecalho>
+      <Logo width="2em" height="5em" />
+      <Nav />
+    </WrapperCabecalho>
+  );
+}

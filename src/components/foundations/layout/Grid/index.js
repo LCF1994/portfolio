@@ -1,18 +1,23 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { breakpointList } from '../../../../theme';
 
-const Container= styled.div`
+const Container = styled.div`
     display:grid;
 
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: auto;
     grid-gap: 1em;
 
-    width:100%;
+    width:80%;
     justify-content:center;
     align-items:center;
+
+    margin:auto;
+
+    @media(min-width: ${breakpointList.lg}) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 `;
 
-
-export const Grid = {
-    Container,
-}
+export default {
+  Container,
+};

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { CardList } from '../../../../db';
 import { theme } from '../../../theme';
-import { Grid } from '../../foundations/layout/Grid';
+import Grid from '../../foundations/layout/Grid';
 import Card from '../Card';
 import SectionTitle from './SectionTitle';
 
@@ -12,20 +12,22 @@ const WrapperProjects = styled.section`
     display:flex;
     flex-direction:column;
     align-items:center;
-    background-color: ${ theme.colors.background };
+    background-color: ${theme.colors.background};
+
+    padding-bottom:15px;
 `;
 
-export default function Projects(){
+export default function Projects() {
+  return (
+    <WrapperProjects>
+      <SectionTitle />
+      <Grid.Container>
+        <Card content={CardList[0]} />
+        <Card content={CardList[1]} />
+        <Card content={CardList[2]} />
 
-    return(
-        <WrapperProjects>
-            <SectionTitle />
-            <Grid.Container>
-                <Card content={ CardList[0] } />
-                <Card content={ CardList[1] } />
-                <Card content={ CardList[2] } />
-              
-            </Grid.Container>
-        </WrapperProjects>
-    )
+        <Card content={CardList[1]} destaque />
+      </Grid.Container>
+    </WrapperProjects>
+  );
 }

@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import { theme } from '../../../theme';
 import Icon from '../../foundations/Icon';
-
 
 const WrapperFooter = styled.div`
     height:15vh;
@@ -10,31 +10,30 @@ const WrapperFooter = styled.div`
     justify-content:space-around;
     align-items:center;
 
-    background: ${ theme.colors.background };
+    background: ${theme.colors.background};
 
     margin-top:2px;
 `;
 
-export default function Footer(){
+export default function Footer() {
+  const IconsList = [
+    {
+      icon: 'github-square',
+      link: 'https://github.com/LCF1994',
+    },
+    {
+      icon: 'linkedin-in',
+      link: 'https://www.linkedin.com/in/lucas-campos-ferreira-673267108/',
+    },
+  ];
 
-    const IconsList = [
-        {
-            icon: 'github-square',
-            link: 'https://github.com/LCF1994',
-        },
-        {
-            icon: 'linkedin-in',
-            link: 'https://www.linkedin.com/in/lucas-campos-ferreira-673267108/',
-        }
-    ]
-
-    return(
-        <footer>
-            <WrapperFooter>
-                { IconsList.map(( item )=>(
-                    <Icon key={item.icon} type={ item } />
-                ))}
-            </WrapperFooter>
-        </footer>
-    )
-};
+  return (
+    <footer>
+      <WrapperFooter>
+        { IconsList.map((item) => (
+          <Icon key={item.icon} type={item} />
+        ))}
+      </WrapperFooter>
+    </footer>
+  );
+}

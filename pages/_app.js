@@ -1,14 +1,13 @@
-import { ThemeProvider } from 'styled-components'
-import GlobalStyle from '../src/theme/GlobalStyle'
-import { theme } from '../src/theme'
+import { ThemeProvider } from 'styled-components';
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab, faLinkedinIn, faGitSquare} from '@fortawesome/free-brands-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab, faLinkedinIn, faGitSquare } from '@fortawesome/free-brands-svg-icons';
 
-library.add(fab, faLinkedinIn, faGitSquare)
+import Head from 'next/head';
+import { theme } from '../src/theme';
+import GlobalStyle from '../src/theme/GlobalStyle';
 
-import Head from 'next/head'
-
+library.add(fab, faLinkedinIn, faGitSquare);
 
 export default function App({ Component, pageProps }) {
   return (
@@ -21,5 +20,5 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  )
+  );
 }
